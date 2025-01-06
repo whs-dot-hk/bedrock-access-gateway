@@ -19,5 +19,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: src
+          file: Dockerfile_ecs
           push: true
           tags: ghcr.io/whs-dot-hk/bedrock-access-gateway:test
